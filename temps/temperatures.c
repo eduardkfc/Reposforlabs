@@ -62,9 +62,9 @@ int main(int argc, char* argv[])
     {
         printf("default kelvin\n");
         kelvin_s(temp,KELVIN,FAHRENHEIT,CELSIUS);
-        printf("default celsius");
+        printf("default celsius\n");
         celsius_s(temp,KELVIN,FAHRENHEIT,CELSIUS);
-        printf("default fahrenheit");
+        printf("default fahrenheit\n");
         fahrenheit_s(temp,KELVIN,FAHRENHEIT,CELSIUS);
     }    
 }
