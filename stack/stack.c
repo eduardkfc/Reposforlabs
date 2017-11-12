@@ -2,20 +2,22 @@
 
 int main()
 {
-    float a,b,action,result;
+    int a,b,c,d,result;
+    char action;
     stack_s Stack;
-    createStack(Stack, 4);
-    printf("Write first number \n");
+    createStack(&Stack, 3);
     a = getchar();
-    Stack.stack_push(a);
-    printf("Write second number \n");
+    stack_push(&Stack,&a);
     b = getchar();
-    Stack.stack_push(b);
-    printf("Choose an action");
+    stack_push(&Stack,&b);
     action = getchar();
-    Stack.stack_push(action);
-    for(int i=0;i<=4;i++)
-    {
-        Stack[i]
-    }
+    stack_push(&Stack,&action);
+    c = stack_pop(&Stack);
+    d = stack_pop(&Stack);
+    action = stack_pop(&Stack);
+    if(action == '+') { result = c + d; }
+    else if(action == '-') { result = c - d; }
+    else if(action == '/') { result = c / d; }
+    else if(action == '*') { result = c * d; }
+    printf("%i",result);
 }

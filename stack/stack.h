@@ -49,15 +49,15 @@ void destroyStack(stack_s *s)
     s->elements = NULL;
     s->capacity = 0;
 }
-void stack_pop(stack_s *s)
+int stack_pop(stack_s *s)
 {
     if (stackifempty(s))
     {
         printf("Stack is empty");
-        return;
+        exit(1);
     }
-    else s->size--;
-    return;
+    return s->elements[s->size];
+    if (stackisempty(s) == 0) { s->size--; }
 }
 
 void stack_push(stack_s *s,stackElementT element)
